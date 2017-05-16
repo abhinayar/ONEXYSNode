@@ -1,0 +1,141 @@
+html
+  head
+    meta(charset="UTF-8")
+    link(rel="stylesheet", href="/onexys_dev_style.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
+  body
+    div.user_content
+      div.onexys_styling.o_homepage
+        div.left
+          div.standard_home_box.left#progress
+            h2 My Progress So Far
+            div.module_0.module_background_0
+              a.progress_box.single_line.completed Pre-Test
+            div#progress_labels
+              p Pract.
+              p Apply
+            br
+            div.clear
+            //dynamically do ALL modules (1-10)
+            -var count = 1, progressBoxClasses = ""
+            for item in data.modules
+              //Create temp vars.
+              -var nameLine1 = item.nameLine1, nameLine2 = item.nameLine2, moduleAvailable = item.moduleAvailable, moduleURL = item.moduleURL, moduleBg = item.moduleBackground
+              
+              div(class= "module_" + count + " module_background_" + moduleBg)
+                //Update classnames with pug inline js
+                if moduleAvailable
+                  -progressBoxClasses = "progress_box available"
+                else 
+                  -progressBoxClasses = "progress_box"
+                if count == 11
+                  -progressBoxClasses += " single_line"
+                
+                a(class= progressBoxClasses, href= moduleURL, alt= nameLine1 + " " + nameLine2)= nameLine1
+                  br
+                  | #{nameLine2}
+                if count!= 11
+                  div.onexys_checkbox.aleks_checkbox
+                  div.onexys_checkbox.quiz_checkbox
+                //Increment Count
+                - count++
+              br
+              div.clear
+        div.left
+          div#points.standard_box.left
+            h2 My points
+            p#point_count 0
+            div#flag
+              a(title="Quiz List", href="/courses/686/quizzes", target="", alt="Daily Yalie Quizzes")
+                img(src="https://onexys.me/2016images/checkmarks/DY_Flag.svg")
+          div.lucky_bulldog
+            img(src="https://onexys.me/2016images/checkmarks/lucky2.png" alt="Lucky Bulldog")
+            div.lucky_bulldog_text +500pts!
+          div#leaderboard.standard_home_box.left
+            h2 Leaderboard
+            table
+              thead
+                tr
+                  th Please
+                  th Team
+                  th Score
+              tbody
+                tr.leader_1
+                  td 1
+                  td
+                  td
+                tr.leader_2
+                  td 2
+                  td
+                  td
+                tr.leader_3
+                  td 3
+                  td
+                  td
+                tr.leader_me
+                  td
+                    div#myteam_head(z-index="2") MY TEAM
+                  td
+                  td
+          div#recent_badges.standard_home_box.left
+            h2 Recent Badges
+            div#recent_badge1.onexys_badge.completed
+              div.badge_descriptor.badge_box
+                h3
+                p
+              div.badge_points.badge_box
+                p
+              div.badge_portrait
+              div.badge_label.badge_box
+                h3
+                p
+            div#recent_badge2.onexys_badge.completed
+              div.badge_descriptor.badge_box
+                h3
+                p
+              div.badge_points.badge_box
+                p
+              div.badge_portrait
+              div.badge_label.badge_box
+                h3
+                p
+            div#recent_badge3.onexys_badge.completed
+              div.badge_descriptor.badge_box
+                h3
+                p
+              div.badge_points.badge_box
+                p
+              div.badge_portrait
+              div.badge_label.badge_box
+                h3
+                p
+            br
+            div.clear
+            p#badges_link_sentence
+              a(title="info_Badges", href= data.badgesPageLink) Click here to see all your badges
+          br
+          div.clear
+          div#updates.standard_home_box.left
+            h2 Updates
+            //dynamically do ALL entries
+            for item in data.entries
+              div.entry.clear
+                p.entry_header
+                  strong= item.entryWeek
+                  item.entryDate
+                p.entry_text!= item.entryText
+          div#featured.standard_home_box.left
+            h2 Life @ Yale Videos
+            p
+              a(href= data.lifeAtYaleLink, alt="Life at Yale link") Click here to see all Life at Yale videos
+            //dynamically load ALL onexys_vidoes
+            for item in data.lifeAtYaleVideos
+              div.onexys_video
+                a.colorbox(href= item.videoLocation)
+                  img.onexys_thumbnail(src= data.videoImageSrc)
+                  img.onexys_playbutton(src= data.videoPlayButtonSrc)
+              p= item.videoDesc
+      //ONEXYS script
+      script(src="/onexys_dev_script.js")
+    
+                

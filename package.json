@@ -1,0 +1,27 @@
+{
+  "name": "onexys-templating",
+  "version": "1.0.0",
+  "description": "ONEXYS Templating Canvas Files",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinayar/ONEXYSNode.git"
+  },
+  "keywords": [
+    "OENXYS"
+  ],
+  "author": "Abhi Nayar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhinayar/ONEXYSNode/issues"
+  },
+  "homepage": "https://github.com/abhinayar/ONEXYSNode#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.1"
+  }
+}

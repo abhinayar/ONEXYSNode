@@ -1,0 +1,59 @@
+{
+  titleBlue: "Compound Interest and",
+  titleYellow: "the Number e",
+  backgroundImageSrc : "/courses/686/files/164134/preview",
+  backgroundImageAlt : "Linsly-Chittenden_Module.png",
+  backgroundImageName : "Linsly-Chittenden Hall",
+  backgroundImageDesc : "Linsly-Chittenden Hall (LC) serves as a regular classroom space for English, History, and Language classes at Yale. In 1961, the Milgram experiment on obedience to authority figures was conducted in the basement of this building.",
+  overview_start : "Over. And over.  And over again and again and again. In this module, we explore how compounding interest over and over impacts the growth of a a bank account, the economy, and many other things. When we talk about Compound Interest we ask questions like:",
+  overview_list : [
+    {
+      text : "What's the effective annual interest rate if we compound interest several times a year?"
+    },
+    {
+      text : "What's the effective annual interest rate if we compound interest all the time? Like, every moment of every day, i.e. <i>continuously</i>?"
+    },
+    {
+      text : "Where does the number <em>e</em> come from? How does it relate to compound interest?"
+    }
+  ],
+  overview_end : "We interact with these ideas in the application <em>Interest Rates and the Fisher Equation.</em>",
+  videoPlayButtonSrc : "https://onexys.me/2016images/videos/playbutton.png",
+  videos : {
+    1 : {
+      videoLocation : "https://yale.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=81ce276e-8004-4586-8c75-5c52cd7a1b22",
+      videoImageLocation : "/courses/686/files/164164/preview",
+      videoImageAlt : "4.4.1_compound_number_e_5K_bug.png",
+      videoDesc : "Compound Interest and the Number <i>e</i>"
+    }
+  },
+  practiceDesc : "Practice, practice, practice! We would like you to keep working until you reach 90% proficiency for this module in ALEKS.",
+  practiceQuizLocation : "/courses/686/modules/items/7296",
+  applySection : {
+    applyTitle : "Interest Rates and the Fisher Equation",
+    applyDesc : "Irving Fisher (a Yale grad!) received Yale's first PhD in Economics. In this application we look at his understanding of the relationship between interest rates and inflation rates.",
+    applyPDFSrc : '/courses/686/files/146731/download?wrap=1',
+    applyPDFEndpoint : 'https://yale.instructure.com/api/v1/courses/686/files/14673',
+    applyPDFReturnType : 'File',
+    applyDiscussionLocation : "/courses/686/assignments/5222",
+    applyQuiz : "/courses/686/assignments/5914",
+    icons : {
+      read : "/courses/686/files/164208/preview",
+      reflect : "/courses/686/files/164205/preview",
+      meet : "/courses/686/files/164207/preview",
+      answer : "/courses/686/files/164206/preview"
+    }
+  },
+  exploreSection : [
+    {
+      iframe_html : '<iframe width="400" height="225" src="https://www.youtube.com/embed/jQSoXQ9yPc4" alt="financial advice" frameborder="0" allowfullscreen></iframe>',
+      iframe_src : "https://www.youtube.com/embed/jQSoXQ9yPc4",
+      iframe_desc : "Here's some pretty good financial advice that relates to compound interest."
+    }, 
+    {
+      iframe_html : '<iframe src="https://player.vimeo.com/video/58282233" alt="stock market and equilibrium" width="400" height="225" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen"></iframe>',
+      iframe_src : "https://player.vimeo.com/video/58282233",
+      iframe_desc : "Can the economy be at equilibrium or headed towards it? The Stock Market Crash of the 1920's said "no". Irving Fisher explained why not."
+    }
+  ]
+}
