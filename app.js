@@ -145,60 +145,43 @@ var data = {
 }
 
 var moduleData = {
-  titleBlue: "Compound Interest and",
-  titleYellow: "the Number e",
-  backgroundImageSrc : "https://yale.instructure.com/courses/686/files/164134/preview",
-  backgroundImageAlt : "Linsly-Chittenden_Module.png",
-  backgroundImageName : "Linsly-Chittenden Hall",
-  backgroundImageDesc : "Linsly-Chittenden Hall (LC) serves as a regular classroom space for English, History, and Language classes at Yale. In 1961, the Milgram experiment on obedience to authority figures was conducted in the basement of this building.",
-  overview_start : "Over. And over.  And over again and again and again. In this module, we explore how compounding interest over and over impacts the growth of a a bank account, the economy, and many other things. When we talk about Compound Interest we ask questions like:",
-  overview_list : [
+  title_blue: "Compound Interest and",
+  title_yellow: "the Number e",
+  background_image_src : "https://yale.instructure.com/courses/686/files/164134/preview",
+  background_alt : "Linsly-Chittenden_Module.png",
+  background_name : "Linsly-Chittenden Hall",
+  background_desc : "Linsly-Chittenden Hall (LC) serves as a regular classroom space for English, History, and Language classes at Yale. In 1961, the Milgram experiment on obedience to authority figures was conducted in the basement of this building.",
+  overview: "<p>Over. And over.  And over again and again and again. In this module, we explore how compounding interest over and over impacts the growth of a a bank account, the economy, and many other things. When we talk about Compound Interest we ask questions like:</p><ul><li>What's the effective annual interest rate if we compound interest several times a year?</li><li>What's the effective annual interest rate if we compound interest all the time? Like, every moment of every day, i.e. <i>continuously</i>?</li><li>Where does the number <em>e</em> come from? How does it relate to compound interest?</li></ul><p>We interact with these ideas in the application <em>Interest Rates and the Fisher Equation.</em></p>",
+  video_play_button_src : "https://onexys.me/2016images/videos/playbutton.png",
+  videos : [
     {
-      text : "What's the effective annual interest rate if we compound interest several times a year?"
-    },
-    {
-      text : "What's the effective annual interest rate if we compound interest all the time? Like, every moment of every day, i.e. <i>continuously</i>?"
-    },
-    {
-      text : "Where does the number <em>e</em> come from? How does it relate to compound interest?"
+      video_src : "https://yale.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=81ce276e-8004-4586-8c75-5c52cd7a1b22",
+      video_image_src : "https://yale.instructure.com/courses/686/files/164164/preview",
+      video_image_alt : "4.4.1_compound_number_e_5K_bug.png",
+      video_desc : "Compound Interest and the Number <i>e</i>"
     }
   ],
-  overview_end : "We interact with these ideas in the application <em>Interest Rates and the Fisher Equation.</em>",
-  videoPlayButtonSrc : "https://onexys.me/2016images/videos/playbutton.png",
-  videos : {
-    1 : {
-      videoLocation : "https://yale.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=81ce276e-8004-4586-8c75-5c52cd7a1b22",
-      videoImageLocation : "https://yale.instructure.com/courses/686/files/164164/preview",
-      videoImageAlt : "4.4.1_compound_number_e_5K_bug.png",
-      videoDesc : "Compound Interest and the Number <i>e</i>"
-    }
-  },
-  practiceDesc : "Practice, practice, practice! We would like you to keep working until you reach 90% proficiency for this module in ALEKS.",
-  practiceQuizLocation : "/courses/686/modules/items/7296",
-  applySection : {
-    applyTitle : "Interest Rates and the Fisher Equation",
-    applyDesc : "Irving Fisher (a Yale grad!) received Yale's first PhD in Economics. In this application we look at his understanding of the relationship between interest rates and inflation rates.",
-    applyPDFSrc : '/courses/686/files/146731/download?wrap=1',
-    applyPDFEndpoint : 'https://yale.instructure.com/api/v1/courses/686/files/14673',
-    applyPDFReturnType : 'File',
-    applyDiscussionLocation : "/courses/686/assignments/5222",
-    applyQuiz : "/courses/686/assignments/5914",
-    icons : {
-      read : "https://yale.instructure.com/courses/686/files/164208/preview",
-      reflect : "https://yale.instructure.com/courses/686/files/164205/preview",
-      meet : "https://yale.instructure.com/courses/686/files/164207/preview",
-      answer : "https://yale.instructure.com/courses/686/files/164206/preview"
-    }
-  },
-  exploreSection : [
+  practicee_quiz_src : "/courses/686/modules/items/7296",
+  apply_title : "Interest Rates and the Fisher Equation",
+  apply_desc : "Irving Fisher (a Yale grad!) received Yale's first PhD in Economics. In this application we look at his understanding of the relationship between interest rates and inflation rates.",
+  apply_read_src : '/courses/686/files/146731/download?wrap=1',
+  apply_read_endpoint : 'https://yale.instructure.com/api/v1/courses/686/files/14673',
+  apply_read_return_type : 'File',
+  apply_discussion_src : "/courses/686/assignments/5222",
+  apply_quiz_src : "/courses/686/assignments/5914",
+  apply_icons : {
+    read : "https://yale.instructure.com/courses/686/files/164208/preview",
+    reflect : "https://yale.instructure.com/courses/686/files/164205/preview",
+    meet : "https://yale.instructure.com/courses/686/files/164207/preview",
+    answer : "https://yale.instructure.com/courses/686/files/164206/preview"
+  },   
+  explore_modules : [
     {
       iframe_html : '<iframe width="400" height="225" src="https://www.youtube.com/embed/jQSoXQ9yPc4" alt="financial advice" frameborder="0" allowfullscreen></iframe>',
-      iframe_src : "https://www.youtube.com/embed/jQSoXQ9yPc4",
       iframe_desc : "Here's some pretty good financial advice that relates to compound interest."
     }, 
     {
       iframe_html : '<iframe src="https://player.vimeo.com/video/58282233" alt="stock market and equilibrium" width="400" height="225" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen"></iframe>',
-      iframe_src : "https://player.vimeo.com/video/58282233",
       iframe_desc : "Can the economy be at equilibrium or headed towards it? The Stock Market Crash of the 1920's said 'no'. Irving Fisher explained why not."
     }
   ]

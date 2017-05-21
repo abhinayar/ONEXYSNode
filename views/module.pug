@@ -8,13 +8,13 @@ html
       | !{' '}
   body
     div.onexys_styling
-      img.background_building(src= data.backgroundImageSrc, alt= data.backgroundImageAlt)
+      img.background_building(src= data.background_image_src, alt= data.background_alt)
       div#background_building_outline
         div#bbo_white
       div#background_building_outline2
       div.title_mod.standard_title_box.left
-        p= data.titleBlue
-        h1= data.titleYellow
+        p= data.title_blue
+        h1= data.title_yellow
       div.quicklinks.standard_title_box.left
         a(href="#watch") Watch
         br
@@ -24,17 +24,26 @@ html
         br
         a(href="#explore") Explore
       div.building_descriptor.standard_title_box.right
-        h2= data.backgroundImageName
-        p= data.backgroundImageDesc
+        h2!= data.background_name
+        p!= data.background_desc
       div.clear
       div#overview.module_box.standard_box.left
         div.title_box.standard_box
           h2 Overview
-        p= data.overview_start
-        ul
-          for item in data.overview_list
-            li= item.text
-        p!= data.overview_end 
+        div!= data.overview
+        ol
+          li
+            strong Watch
+            | the videos.
+          li
+            strong Practing
+            | the learning objectives (LOs) related to this module until you reach proficiency.
+          li
+            strong Apply
+            | your understanding. These applications are intended to challenge your thinking.
+          li 
+            strong Explore
+            | the ideas in this module further.
       div.left
         div#watch.module_box.standard_box
           div.title_box.standard_box
@@ -42,43 +51,43 @@ html
           for item in data.videos
             div.watch_video.left
               div.onexys_video
-                a.colorbox(href= item.videoLocation)
-                  img.onexys_thumbnail(src= item.videoImageLocation, alt= item.videoImageAlt)
-                  img.onexys_playbutton(src= data.videoPlayButtonSrc, alt="")
+                a.colorbox(href= item.video_src)
+                  img.onexys_thumbnail(src= item.video_image_src, alt= item.video_image_alt)
+                  img.onexys_playbutton(src= data.video_play_button_src, alt="")
               p
                 span(style="font-size: 12pt;")
-                  strong!= item.videoDesc
+                  strong!= item.video_desc
           div.clear
         div#practice.module_box.standard_box
           div.title_box.standard_box
             h2 2. Practice
-          p= data.practiceDesc
-          a(href= data.practiceQuizLocation, target="")
+          p Practice, practice, practice! We would like you to keep working until you reach 90% proficiency for this module in ALEKS.
+          a(href= data.practice_quiz_src, target="")
             div.onexys_button Practice Now
         div#apply.module_box.standard_box
           div.title_box.standard_box
             h2 3. Apply
-          h4!= data.applySection.applyTitle
+          h4!= data.apply_title
           p
-            span!= data.applySection.applyDesc
-          a(href= data.applySection.applyPDFSrc, data-api-endpoint= data.applySection.applyPDFEndpoint, data-api-returntype= data.applySection.applyPDFReturnType)
+            span!= data.apply_desc
+          a(href= data.apply_read_src, data-api-endpoint= data.apply_read_endpoint, data-api-returntype= data.apply_read_return_type)
             div.onexys_button.apply_button.left
-              img(src= data.applySection.icons.read, alt="Read.png")
+              img(src= data.apply_icons.read, alt="Read.png")
               | 1. Read
           p.apply_description.left
             em Before
             |  your team meeting read the scenario and questions.
           div.clear
-          a(title="Application Reflection 3.2: Interest Rates and the Fisher Equation", href= data.applySection.applyDiscussionLocation, data-api-endpoint= "https://yale.instructure.com/api/v1/" + data.applySection.applyDiscussionLocation, data-api-returntype="Discussion")
+          a(title="Application Reflection 3.2: Interest Rates and the Fisher Equation", href= data.apply_discussion_src, data-api-endpoint= "https://yale.instructure.com/api/v1/" + data.apply_discussion_src, data-api-returntype="Discussion")
             div.onexys_button.apply_button.left
-              img(src= data.applySection.icons.reflect, alt="Reflect.png")
+              img(src= data.apply_icons.reflect, alt="Reflect.png")
               | 2. Reflect
           p.apply_description.left
             em Before
             |  your team meeting, complete the reflection
           div.clear
           div#meet-button.onexys_button.apply_button.left
-            img(src= data.applySection.icons.meet  alt="Meet.png")
+            img(src= data.apply_icons.meet  alt="Meet.png")
             | 3. Meet
           p.apply_description.left
             em Meet with your team!
@@ -86,7 +95,7 @@ html
           div.clear
           a(title="Fisher Equation", href="/courses/686/assignments/5914", target="")
             div.onexys_button.apply_button.left
-              img(src= data.applySection.icons.answer, alt="Answer.png")
+              img(src= data.apply_icons.answer, alt="Answer.png")
               | 4. Answer
           p.apply_description.left
             em After
@@ -97,11 +106,11 @@ html
             h2 4. Explore
           div.explore_main
             - var i = 1
-            for item in data.exploreSection 
+            for item in data.explore_modules 
               != item.iframe_html
               br
               != item.iframe_desc
-              if i!= data.exploreSection.length
+              if i!= data.explore_modules.length
                 br
                 br
               else 
